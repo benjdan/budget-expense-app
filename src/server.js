@@ -13,12 +13,6 @@ if (process.env.NODE_ENV === "production") job.start();
 // middleware
 app.use(rateLimiter);
 
-// our custom simple middleware
-// app.use((req, res, next) => {
-//   console.log("Hey we hit a req, the method is", req.method);
-//   next();
-// });
-
 const PORT = process.env.PORT || 5001;
 
 app.get("/api/health", (req, res) => {

@@ -23,12 +23,6 @@ export async function createTransaction(req, res) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
-    // const transaction = await sql`
-    //   INSERT INTO transactions(user_id,title,amount,category)
-    //   VALUES (${user_id},${title},${amount},${category})
-    //   RETURNING *
-    // `;
-
     const data = safeJSONParse(req.body);
     const transaction = await sql`INSERT INTO transactions (user_id, title, amount, category, data) 
          VALUES (${user_id}, ${title}, ${amount}, ${category}, ${JSON.stringify(data)})

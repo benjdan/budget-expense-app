@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon src/server.js",
@@ -12,11 +12,11 @@
   "license": "ISC",
   "description": "Budget Application - Backend",
   "dependencies": {
-    "@upstash/redis": "^1.36.3",
+    "@upstash/redis": "^1.38.0",
     "cors": "^2.8.6",
     "cron": "^4.4.0",
-    "dotenv": "^17.3.1",
-    "express": "^4.22.1"
+    "dotenv": "^17.4.2",
+    "express": "^4.22.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
